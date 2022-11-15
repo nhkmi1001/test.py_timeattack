@@ -9,7 +9,6 @@ class UserManager(BaseUserManager):
         user = self.model(
             username=username,
         )
-        print("가입")
         user.set_password(password)
         user.save(using=self._db)
         return user
